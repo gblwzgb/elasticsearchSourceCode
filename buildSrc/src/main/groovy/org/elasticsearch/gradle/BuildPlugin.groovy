@@ -170,7 +170,7 @@ class BuildPlugin implements Plugin<Project> {
 
     /** Finds and enforces JAVA_HOME is set */
     private static String findJavaHome() {
-        String javaHome = System.getenv('JAVA_HOME')
+        String javaHome = "/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home";//System.getenv('JAVA_HOME')
         if (javaHome == null) {
             if (System.getProperty("idea.active") != null || System.getProperty("eclipse.launcher") != null) {
                 // intellij doesn't set JAVA_HOME, so we use the jdk gradle was run with
